@@ -38,7 +38,7 @@ Just click the link above and follow the instructions
 
 1. Clone the repo
    ```bash
-   git clone https://github.com/Redisrupt/mermaid-diagrams
+   git clone https://github.com/lexun/mermaid-diagrams
    ```
 1. Enable developer mode in chrome://extensions
 1. Click on load unpacked extension
