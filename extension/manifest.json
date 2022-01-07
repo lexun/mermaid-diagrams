@@ -21,14 +21,8 @@
         "https://github.com/*",
         "https://gist.github.com/*"
       ],
-      "css": [
-        "diagrams.css",
-        "on_change_animation.css"
-      ],
-      "js": [
-        "mermaid.min.js",
-        "content.js"
-      ]
+      "css": ["on_change_animation.css"],
+      "js": ["mermaid.min.js", "content.js"]
     }
   ]
 }

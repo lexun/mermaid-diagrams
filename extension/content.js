@@ -89,11 +89,29 @@
 		}
 	}
 
-	function processPage() {
-		for (const transformation of transformations) {
-			$(transformation.parentElementSelector).forEach(x => transformElement(x, transformation));
-		}
-	}
+  function processPage() {
+    switch (document.documentElement.getAttribute("data-color-mode")) {
+      case "light":
+        break;
+      case "dark":
+        setDarkMode();
+        break;
+      case "auto":
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+          setDarkMode();
+        break;
+    }
+
+    for (const transformation of transformations) {
+      $(transformation.parentElementSelector).forEach((x) =>
+        transformElement(x, transformation)
+      );
+    }
+  }
+
+  function setDarkMode() {
+    window.mermaid.initialize({ theme: "dark" });
+  }
 
 	function onElementInsert(event) {
 		// We are only interested in the diagrams that trigger the css animation
