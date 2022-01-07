@@ -57,6 +57,7 @@
 			}
 			// Generate or regenerate diagram if it is existing.
 			window.mermaid.render(`${mermaid_name}_svg`, code, insertSvg);
+			parentElem.style.display = "none";
 		}
 		catch (error) {
 			console.error('>>> mermaid error', error);
